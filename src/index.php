@@ -1,14 +1,9 @@
 <?php
 
-use App\Controllers\CarController;
-use App\Enum\BodyTypeEnum;
+declare(strict_types=1);
+
+use App\Routing\Route;
 
 require __DIR__ . '/vendor/autoload.php';
 
-$_GET['bodyType'] = BodyTypeEnum::HATCHBACK;
-$_GET['capacity'] = 99;
-$_GET['doorsCount'] = 4;
-
-$controlCar = new CarController();
-
-$controlCar->create();
+Route::route();
